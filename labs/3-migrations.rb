@@ -9,6 +9,7 @@ Activity.destroy_all
 # **************************
 
 # Add new Activity model with database table
+# "Join model between Salesperson and Contact"
 
 # 1. in terminal, run:
 # rails generate model Activity
