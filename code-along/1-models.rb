@@ -26,23 +26,23 @@ company.save
 
 puts "There are #{Company.all.count} companies"
 
+amazon = Company.new
+amazon.name = "Amazon"
+amazon.url = "https://amazon.com"
+amazon.city = "Seattle"
+amazon.state = "WA"
 
-company.name = "Amazon"
-company.url = "https://amazon.com"
-company.city = "Seattle"
-company.state = "WA"
 
-company = Company.new(values)
-company.save
+amazon.save
 
 puts "There are #{Company.all.count} companies"
 
-
-company.name = "Tesla"
-company.url = "https://tesla.com"
-company.city = "Palo Alto"
-company.state = "Tesla"
-company.save
+tesla = Company.new
+tesla.name = "Tesla"
+tesla.url = "https://tesla.com"
+tesla.city = "Palo Alto"
+tesla.state = "Tesla"
+tesla.save
 
 puts "There are #{Company.all.count} companies"
 
@@ -57,7 +57,7 @@ puts "There are #{Company.all.count} companies"
 
 puts Company.where({ state: "CA", name: "Apple"})
 apple = Company.where({ state: "CA", name: "Apple"})[0]
-puts apple.inspect
+#puts apple.inspect
 
 # 4. read column values from row
 #puts "#{apple.read_attribute(:name)} has a website: #{apple.url}"
@@ -67,7 +67,7 @@ puts apple.inspect
 apple.write_attribute(:slogan, "Think Different.")
 apple.save
 
-puts apple.inspect
+#puts apple.inspect
 
 tesler = Company.new({ name: "Tesler"})
 tesler.save

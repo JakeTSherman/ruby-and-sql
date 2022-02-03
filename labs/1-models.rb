@@ -19,6 +19,7 @@ jassy = Contact.new
 jassy.first_name = "Andy"
 jassy.last_name = "Jassy"
 jassy.email = "andy@amazon.com"
+jassy.company_id = amazon.id
 jassy.save
 
 craig = Contact.new
