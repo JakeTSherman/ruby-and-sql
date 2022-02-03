@@ -11,7 +11,9 @@ end
 puts " "
 #puts contacts.inspect
 
-
+tesla = Company.where({ name: "Tesla"})[0]
+puts tesla.name.upcase
+puts " "
 # ---------------------------------
 # Contacts: 4
 # Andy Jassy - andy@amazon.com - Amazon.com, Inc.
