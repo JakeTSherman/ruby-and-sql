@@ -10,9 +10,10 @@ Contact.destroy_all
 
 # 1a. check out the schema file
 # 1b. check out the model file
-apple.id = Company.where({name: "Apple"})[0]
-tesla.id = Company.where({name: "Tesla"})[0]
-### FIGURE OUT A WAY TO MATCH THESE TO ID's BELOW
+apple = Company.where({name: "Apple"})[0]
+tesla = Company.where({name: "Tesla"})[0]
+amazon = Company.where({name: "Amazon"})[0]
+
 # 2. create 1-2 new contacts for each company (they can be made up)
 jassy = Contact.new
 jassy.first_name = "Andy"
@@ -34,10 +35,17 @@ musk.email = "elon@tesla.com"
 musk.company_id = tesla.id
 musk.save
 
+cook = Contact.new
+cook.first_name = "Tim"
+cook.last_name = "Cook"
+cook.email = "tim@apple.com"
+cook.company_id = apple.id
+cook.save
+
 puts "There are #{Contact.all.count} contacts"
 
 
-puts Contact.inspect
+puts Contact.all.inspect
 
 # 3. write code to display how many contacts are in the database AND each contact's info (name, email), e.g.:
 
@@ -47,3 +55,11 @@ puts Contact.inspect
 # Craig Federighi - craig@apple.com
 # Elon Musk - elon@tesla.com
 # Tim Cook - tim@apple.com
+
+
+puts "Contacts: #{Contact.all.count}"
+contacts = Contact.all
+
+for people in contacts
+    puts "#{people.first_name} - #{people.email}"
+end

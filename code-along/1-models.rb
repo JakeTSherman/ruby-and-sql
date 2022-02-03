@@ -26,12 +26,11 @@ company.save
 
 puts "There are #{Company.all.count} companies"
 
-values = {
-    name: "Amazon",
-    url: "https://amazon.com",
-    city: "Seattle",
-    state: "WA"
-}
+
+company.name = "Amazon"
+company.url = "https://amazon.com"
+company.city = "Seattle"
+company.state = "WA"
 
 company = Company.new(values)
 company.save
@@ -61,7 +60,7 @@ apple = Company.where({ state: "CA", name: "Apple"})[0]
 puts apple.inspect
 
 # 4. read column values from row
-puts "#{apple.read_attribute(:name)} has a website: #{apple.url}"
+#puts "#{apple.read_attribute(:name)} has a website: #{apple.url}"
 
 
 # 5. update attribute value
