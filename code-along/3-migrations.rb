@@ -33,4 +33,10 @@ salesperson.last_name = "Eng"
 salesperson.email = "brian@tacos.com"
 salesperson.save
 
+salesperson2 = Salesperson.new
+salesperson2.first_name = "Ben"
+salesperson2.last_name = "Block"
+salesperson2.email = "ben@test.com"
+salesperson2.save
+
 puts Salesperson.all.count
